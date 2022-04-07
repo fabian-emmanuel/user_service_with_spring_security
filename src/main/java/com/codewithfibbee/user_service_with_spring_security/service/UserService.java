@@ -2,6 +2,7 @@ package com.codewithfibbee.user_service_with_spring_security.service;
 
 import com.codewithfibbee.user_service_with_spring_security.entity.User;
 import com.codewithfibbee.user_service_with_spring_security.entity.VerificationToken;
+import com.codewithfibbee.user_service_with_spring_security.model.PasswordResetModel;
 import com.codewithfibbee.user_service_with_spring_security.model.UserModel;
 
 public interface UserService {
@@ -12,4 +13,10 @@ public interface UserService {
     String validateRegistrationToken(String token);
 
     VerificationToken generateNewVerificationToken(String oldToken);
+
+    User findUserByEmail(String email);
+
+    void createPasswordResetToken(User user, String token);
+
+    String validatePasswordResetToken(String token, PasswordResetModel passwordResetModel);
 }

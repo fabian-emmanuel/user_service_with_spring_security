@@ -1,14 +1,12 @@
 package com.codewithfibbee.user_service_with_spring_security.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Builder
+@Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
